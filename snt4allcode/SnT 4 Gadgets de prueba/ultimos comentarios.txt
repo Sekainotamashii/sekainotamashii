@@ -1,3 +1,0 @@
-<ul id='ultimos-comentarios'>
-<script src='http://www.sekaiv4.blogspot.com/feeds/comments/default?alt=json-in-script&amp;callback=showrecentcomments'/>
-</ul></script></ul>
