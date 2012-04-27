@@ -1,0 +1,6 @@
+<ul id="social-icons"> 
+<li id="social-icons-facebook" style="opacity: 1;"><a href="http://www.facebook.com/mikotube"><span style="display: none; top: 5px; left: 4px;">Facebook</span></a></li> 
+<li id="social-icons-google" style="opacity: 1;"><a href="https://plus.google.com/u/0/b/113702645702883033389/me/posts"><span style="display: none; top: 5px; left: 4px;">Google+</span></a></li> 
+<li id="social-icons-vimeo" style="opacity: 1;"><a href="http://vimeo.com/groups/mikotube"><span style="display: none; top: 5px; left: 4px;">Vimeo</span></a></li> 
+<li id="social-icons-twitter" style="opacity: 1;"><a href="https://twitter.com/#!/mikotube"><span style="display: none; top: 5px; left: 4px;">twitter</span></a></li> 
+</ul>
