@@ -1,0 +1,18 @@
+# BEGIN Anti HotLink
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteBase /
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http://subdominio.tureceta.es/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://subdominio.tureceta.es$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://tureceta.es/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://tureceta.es$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.tureceta.es/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.tureceta.es$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.google.es/reader/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.google.com/reader/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://feeds.feedburner.com/tureceta.es/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://maps.google.es.*$      [NC]
+RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ http://www.tureceta.es/nohotlink.gif [R,NC,L]
+</IfModule>
+# END Anti HotLink
