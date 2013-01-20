@@ -53,5 +53,5 @@
 	}
 })(jQuery);
 $(function(){
-	$(".scrollingtext").scroller({spaceBetween: 4});
+	$("#tweet.scrollingtext").scroller({spaceBetween: 4});
 });
