@@ -21,7 +21,7 @@
 }
 
 #facebooktrafficdriver {
-    background: url(images/bg.jpg) no-repeat;
+    background: url(images/bgfbtd.jpg) no-repeat;
     box-shadow: 5px 5px 20px #ccc;
     display: none;
     padding-bottom: 5px;
@@ -73,11 +73,11 @@
 	position:absolute;
 	right:-30px;
 	top:-33px;
-	background: url(images/close.png) -40px 0px;
+	background: url(images/closefbtd.png) -40px 0px;
 }
 
 #facebooktrafficdriver .modalnav:hover {
-    background: url(images/close.png) -40px 0px;
+    background: url(images/closefbtd.png) -40px 0px;
 }
 
 #facebooktrafficdriver .vcontent {
