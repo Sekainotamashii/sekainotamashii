@@ -66,35 +66,18 @@
 
 
     .td2
-
         {
-
 		filter:alpha(opacity=80);
-
 	    -moz-opacity:0.80;
-
     	opacity: 0.80;
-
         color: #d4d4d4;
-		
 		line-height:20px;
-
         border-width: 0px 1px 1px 0px;
-
         border-style: solid;
-
         border-color: #878787;
-		
-		-webkit-border-radius: 30px;
-        -moz-border-radius: 30px;
-        border-radius: 30px;
-
         padding: 2px;
-
         background-color: #242424; 
-
         }
-   
    
 /* Esto representa el "Título de Anime", "Score", "# Eps" columnas [JC-Elric] */
    
