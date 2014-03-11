@@ -1,182 +1,490 @@
 /*
-// JC-Elric's anime/manga list version 1.0 11 March 2014. 
-//
-// Featured character is Hatsune Miku from VOCALOID. The artist is Gabaisuito-n. 
-// Source image: http://www.pixiv.net/member_illust.php?mode=medium&illust_id=25846826
-//
-// Please do not use without permission.
+// Rukayex's Anime List, Version 5: The Colorful and the Colorless, ft. Black Rock Shooter. 27 March 2011.
 */
 
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic|Open+Sans+Condensed:300,300italic,700);
+@import url(http://dl.dropbox.com/u/94582422/list5brs/http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic);
 
 BODY
 {
-	font-family: 'Source Sans Pro', sans-serif !important;
-	font-size: 14px;
-	line-height: 24px;
-	background-color:#000;
-	color:#8d9396;
-	font-weight:normal;
-	background: url(https://dl.dropbox.com/u/94582422/list13sawasawa/sawasawaxx.png) top center fixed no-repeat;
+	background: #eaeaeb url(http://dl.dropbox.com/u/94582422/list5brs/bg.png) top center repeat-y;
+	font-family: verdana,sans-serif !important;
+	font-size: 11px;
+	text-transform: uppercase;
 }
 
+/*
+// Determines the positioning of your list
+*/
+
+/* You might want to set the border-bottom width to 15px so it matches width of white space on the side of the list*/
 #mal_control_strip
 {
 	background: none !important;
-	font-family: 'Source Sans Pro', sans-serif !important;
-	font-size:14px !important;
+	font-family: verdana,sans-serif !important;
+	font-size:11px;
 	position: relative !important;
-	color: #8d9396 !important;
-	text-transform:uppercase!important;
 }
 
-#mal_control_strip a, #mal_control_strip strong, #mal_control_strip a:hover 
+#mal_control_strip a, #mal_control_strip strong
 {
-	color: #8d9396 !important;
-	font-family: 'Source Sans Pro', sans-serif !important;
-	font-size:14px;!important;
+	text-transform: uppercase !important;
+	color: #b7b7b7 !important;
+	font-family: verdana,sans-serif !important;
+	font-size:11px;
 	font-variant: normal;
 	font-weight: normal !important;
 	text-decoration: none !important;
+
 }
 
-#mal_cs_pic{
-z-index: 40!important;
-color: #8d9396 !important;
-position: fixed !important;
-left: 15px!important;
-bottom: 14px!important;
-text-align: left !important;
-border:none!important;
-width: 120px!important;
-height:18px!important;
+#mal_control_strip a:hover
+{
+	text-transform: uppercase !important;
+	font-family: verdana,sans-serif !important;
+	font-weight: normal !important;
+	text-decoration: none !important;
+	color: #5bd3fe !important;
 }
-#mal_cs_pic:before{font-family: 'Source Sans Pro', sans-serif !important;font-size:14px !important; content:'Welcome, Guest!'!important;width:120px!important;text-transform:uppercase!important;}
-#mal_cs_pic a{display:none!important;}
 
-#mal_cs_otherlinks div:first-child, #mal_cs_otherlinks div:first-child a{text-transform:uppercase!important;text-align:center!important;font-weight:normal!important;font-size:14px!important;}
-#mal_cs_listinfo div:first-child, #mal_cs_listinfo div:first-child a{text-transform:uppercase!important;text-align:left!important;font-weight:normal!important;font-size:14px!important;}
-#mal_cs_listinfo div:first-child:before{color:#8d9396;font-weight:normal!important;font-family:'Source Sans Pro', sans-serif !important;content:'Welcome, ';}
-#mal_cs_listinfo div:first-child:after{color:#8d9396;font-weight:normal!important;font-family:'Source Sans Pro', sans-serif !important;content:'!';}
-#mal_cs_listinfo div + div, #mal_cs_otherlinks div + div, #mal_cs_links{display:none!important;}
-#mal_cs_listinfo {border-right: none !important;}
+#mal_cs_otherlinks, #mal_cs_otherlinks div, #mal_cs_otherlinks span
+{
+	color: #b7b7b7 !important;
+	font-family: verdana,sans-serif !important;
+	text-transform: uppercase !important;
+	font-weight: normal !important;
+}
 
-#list_surround{margin: 0 auto; position: relative; right:180px; width: 700px;}
-#list_surround br:first-child + table {padding-bottom: 8px;}
-#list_surround br {display: none !important;}
+#mal_cs_pic {display:none !important}
 
-a{background-color: none !important; color: #8d9396; text-decoration: none;}
-a:visited{color: #8d9396; text-decoration: none;}
-a:hover, small:hover, small a:hover{color: #ecb6b6 !important; text-decoration: none;}
-small, small a{font-size:10px;color:#efd3d3!important;font-weight:normal!important;text-transform:uppercase!important;}
+#mal_cs_pic, #mal_cs_listinfo, #mal_cs_links
+{
+	border-right: none !important;
+	font-family: verdana,sans-serif !important;
+}
 
-.td1, .td2 {background: #ffffff; border-style:hidden; border-top: 1px dotted #ededed!important;}
-.td1 small, .td2 small{}
-.td1, .td1 a, .td2, .td2 a {color: #8d9396;}
-.td1 a:hover, .td2 a:hover {color: #ecb6b6;}
+#mal_cs_links
+{
+	width: 144px !important;
+	text-align: right !important;
+	display: block !important;
+}
 
-*[id^=more] .td1, *[id^=more] .td2 {font-weight:normal!important;color:#8d9396;text-align:left!important;padding-left: 40px!important; padding-right:40px!important;line-height:20px!important;}
- 
-.table_header {padding-top:3px;text-transform:uppercase;font-size:14px;color: #8d9396; background:none; border-style: hidden; text-decoration: none !important; font-weight: normal !important;}
-.table_headerLink, .table_headerLink:Visited {color: #8d9396; text-decoration: none !important;}
-.table_headerLink:Hover {color: #ecb6b6;}
-.table_headerLink strong, .table_headerLink{font-weight: normal !important;}
+/*only use the margin or the display, the margin just moves it to the middle more*/
+#mal_cs_powered{display: none;}
 
-td[class^=t]:first-child{padding-left:5px;padding-right:5px;}
-td[class^=t]:last-child{padding-right:5px;}
+#mal_cs_otherlinks div:first-child
+{
+position: fixed;
+width: 142px !important;
+display: block !important;
+text-align: right !important;
+left: 107px !important;
+top: 63px !important;
+line-height: 13px;
+}
+
+#mal_cs_listinfo div:first-child
+{
+position: fixed;
+width: 144px !important;
+display: block !important;
+text-align: right !important;
+left: 105px !important;
+top: 100px !important;
+}
+
+#mal_cs_listinfo div + div
+{
+position: fixed;
+width: 144px !important;
+display: block !important;
+text-align: right !important;
+left: 105px !important;
+top: 113px !important;
+}
+
+#mal_cs_links div:first-child a:first-child
+{
+position: fixed;
+width: 144px !important;
+display: block !important;
+text-align: right !important;
+left: 105px !important;
+top: 129px !important;
+}
+
+#mal_cs_links div:first-child a + a
+{
+position: fixed;
+width: 144px !important;
+display: block !important;
+text-align: right !important;
+left: 105px !important;
+top: 142px !important;
+}
+
+#mal_cs_links div + div a:first-child
+{
+position: fixed;
+width: 144px !important;
+display: block !important;
+text-align: right !important;
+left: 105px !important;
+top: 155px !important;
+}
+
+#mal_cs_links div + div a + a
+{
+position: fixed;
+width: 144px !important;
+display: block !important;
+text-align: right !important;
+left: 105px !important;
+top: 168px !important;
+}
+
+#mal_cs_otherlinks div + div
+{
+display: none !important;
+}
+
+#list_surround
+{
+	width: 610px;
+	background: url(http://dl.dropbox.com/u/94582422/list5brs/topheader.png) top center no-repeat;
+	margin: auto;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	padding-top: 150px;
+	padding-bottom:2px;
+}
+
+#list_surround br:first-child + table
+{
+padding-bottom: 210px;
+}
+
+/*
+//controls ALL columns on your list.
+// Anything you place in here will effect all rows/columns
+//
+*/
+	
+.td1, .td2 {}
+
+/*
+// All links on your list
+*/
+
+    a
+    {
+        color: #a2a1a1;
+        text-decoration: none;
+    }
+
+    a:visited
+    {
+        color: #a2a1a1;
+        text-decoration: none;
+    }
+
+    a:hover
+    {
+        color: #5bd3fe;
+        text-decoration: none;
+    }
+	
+	small, small a
+	{
+		color: #b7b7b7;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-size: 10px;
+	}
+/*
+// Alternating row color 1 and 2
+*/
+
+    .td1, .td2
+    {		
+		color: #a2a1a1;
+		background-color: none;
+		border-style: hidden;
+		background: transparent;
+		padding-bottom:4px;
+		padding-top:4px;
+    }
+
+#list_surround tr:hover{background:#545454;}
+#list_surround tr:hover .animetitle, #list_surround tr:hover .table_header, #list_surround tr:hover .table_headerLink {color: #ffffff;}
+#list_surround tr:hover .td1, #list_surround tr:hover .td2, #list_surround tr:hover .td1 a, #list_surround tr:hover .td2 a {color: #eaeaeb;}
+#list_surround tr:hover .td1 a:hover, #list_surround tr:hover .td2 a:hover {color: #545454;}
+
+*[id^=more] .td1, *[id^=more] .td2
+{
+	padding-left: 48px;
+	line-height: 12pt;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 10px;
+}
+   
+/*
+// This represents the &amp;amp;quot;Anime Title&amp;amp;quot;, &amp;amp;quot;Score&amp;amp;quot;, &amp;amp;quot;# Eps&amp;amp;quot; columns 
+*/
+   
+    .table_header
+    {						
+        color: #85878e;
+		background-color: none;
+		border-style: hidden;
+		padding-bottom: 5px;
+		padding-top: 6px;
+		text-decoration: none !important;
+		font-weight: normal !important;
+    }
+
+/*
+// headerLink represents the color of the links inside the_header 
+*/
+
+.table_headerLink, .table_headerLink:Visited
+{
+	color: #85878e;
+	text-decoration: none !important;
+}
+	    
+    .table_headerLink:Hover
+    {
+        color: #5bd3fe;
+    }
+
+.table_headerLink strong, .table_headerLink
+{
+font-weight: normal !important;
+padding-top: 2px;
+}
+	
+/*
+// Controls the select form decoration (the drop down select box)
+*/
+
+    .form {}
+
+/* Which 'status' up top is selected? */
 
 .status_selected, .status_not_selected
 {
+	display: block;
 	border: none;
-	font-size: 14px;
+	text-align: right;
+	font-family: verdana,sans-serif;
+	font-size: 11px;
+	text-transform: uppercase;
 	z-index: 20 !important;
-	position: relative;
-	text-transform: uppercase !important;
-	font-family: 'Source Sans Pro', sans-serif !important;
-	color: #8d9396;
-	padding-top: 20px;
-	padding-bottom: 20px;
 }
-.status_not_selected:hover, .status_selected:hover{background:#f6e6e6;}
 
-.header_title {font-weight:normal!important;background:url(http://dl.dropbox.com/u/94582422/list9/sectionheader.png);text-align:center;text-transform:uppercase!important;font-size:24px!important;font-family: 'Open Sans Condensed', sans-serif !important;color:#8d9396;width: 700px; height: 43px;padding-top:17px;letter-spacing: .5em;}
-.header_cw, .header_completed, .header_ptw, .header_onhold, .header_dropped {}
+.status_selected, .status_not_selected {
+//left: -1008px;
+right:80.1%;
+position: fixed;
+}
+#list_surround br + table tbody tr td {
+top: 193px !important;
+}
+#list_surround br + table tbody tr td + td {
+top: 206px !important;
+}
+#list_surround br + table tbody tr td + td + td {
+top: 219px !important;
+}
+#list_surround br + table tbody tr td + td + td + td {
+top: 232px !important;
+}
+#list_surround br + table tbody tr td + td + td + td + td{
+top: 245px !important;
+}
+#list_surround br + table tbody tr td + td + td + td + td + td{
+top: 258px !important;
+}
+
+.status_not_selected a:hover, .status_selected a:hover {color: #5bd3fe !important;}
+
+.status_selected a
+{	color: #b7b7b7 !important;
+	}
+
+.status_not_selected a
+{	color: #b7b7b7 !important;
+	}
+
+/*
+Header classes for Currently Watching, Completed, Dropped, etc...
+*/
+.header_title
+{
+	display:none;
+}
+
+.header_cw
+{
+	background-image: url(http://dl.dropbox.com/u/94582422/list5brs/currentlyreading.png);
+	width:610px;
+	height:64px;
+	position:relative;
+}
+
+.header_completed
+{
+	background-image: url(http://dl.dropbox.com/u/94582422/list5brs/completed.png);
+	width:610px;
+	height:64px;
+	position:relative;
+}
+
+.header_ptw
+{
+	background-image: url(http://dl.dropbox.com/u/94582422/list5brs/plantoread.png);
+	width:610px;
+	height:64px;
+	position:relative;
+}
+
+.header_onhold
+{
+	background-image: url(http://dl.dropbox.com/u/94582422/list5brs/onhold.png);
+	width:610px;
+	height:64px;
+	position:relative;
+}
+
+.header_dropped
+{
+	background-image: url(http://dl.dropbox.com/u/94582422/list5brs/dropped.png);
+	width:610px;
+	height:64px;
+	position:relative;
+}
 
 .category_totals
 {
-	background: url(http://dl.dropbox.com/u/94582422/list9/categorybg.png) repeat-x;
+	background: url(http://dl.dropbox.com/u/94582422/list5brs/categorytotals.png) no-repeat;
+	height:15px;
+	width:610px;
 	text-align:center;
-	font-family: 'Source Sans Pro', sans-serif !important;
-	text-transform:uppercase!important;
+	padding-top:3px;
+	padding-bottom:0px;
 	font-size: 12px;
-	border-top: 1px #ededed;
-	color: #8d9396;
-	padding-top:2px;
+	text-transform: uppercase;
+	color:#85878e;
+	font-family: 'Source Sans Pro', sans-serif!important; 
 }
+.category_totals:hover{color:#ffffff;}
 
-#grand_totals:before{content:'grand totals'; display:block;font-weight:normal!important;text-align:center;text-transform:uppercase!important;font-size:24px!important;font-family: 'Open Sans Condensed', sans-serif !important;color:#8d9396;padding-top:5px;letter-spacing: .5em;}
 #grand_totals
-{	text-align: center !important;
-	font-family: 'Source Sans Pro', sans-serif !important;
-	text-transform:uppercase!important;
-	color:#8d9396;
-	font-size:14px;
-	border-color: #efd3d3;
-	border-top-style: dotted;
-	border-bottom-style: dotted;
-	border-width: 1px;
-	padding-left: 150px; padding-right: 150px;
+{
+	background-image: url(http://dl.dropbox.com/u/94582422/list5brs/grandtotals.png);
+	background-repeat: no-repeat;
+	position: relative; 
+	height: 95px;
+	width: 610px;
+	padding-top:75px;
+	left: auto;
+	right: auto;
+	text-align: center;
+	font-size: 12px;
+	text-transform: uppercase;
+	color:#ffffff;
+	font-family: 'Source Sans Pro', sans-serif!important; 
 }
 
+#inlineContent{
+position:fixed;
+width: 1280px;
+height: 322px;
+background-image: url(http://dl.dropbox.com/u/94582422/list5brs/sideboxoverlay.png);
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: top center;
+right: 0px;
+left: 0px;
+top: 0px;
+z-index: -1;
+display: block !important;
+}
+
+
+/* header_al is thesurrounding &amp;amp;quot;User's Anime List&amp;amp;quot; at the top */
+
+.header_al
+{
+	position:fixed;
+	margin: auto 69px;
+}
+
+/* header_al_links is thewith your &amp;amp;quot;Profile&amp;amp;quot; and &amp;amp;quot;MyAnimeList home&amp;amp;quot; links */
+
+.header_al_links
+{
+	position:fixed;
+	margin: auto 69px;
+	display: block !important;
+}
+
+/* controls what styles you can give to all the anime titles in your list */
 .animetitle
 {
-	font-family: 'Source Sans Pro', sans-serif !important;
-	font-size: 14px;
-	text-transform:uppercase;
-	letter-spacing:.1em;
-}
-
-#copyright
-{padding-bottom:50px;padding-left: 75px; padding-right: 75px;}
-#copyright, #copyright a{color: #8d9396;}
-#copyright a:hover {color: #8d9396;}
-
-#copyright:before {font-size: 14px; color: #d0a6a6;content:'Design & code by Rukayex. Art by sawasawa. Completed March 2013.'; display: block;}
-
-#list_surround {margin:auto;}
-
-#mal_cs_otherlinks div:first-child {z-index:40;position: fixed !important;right: 0px !important;left: 0px !important;margin: 0 auto !important;bottom:9px!important;text-align:center!important;}
-#mal_cs_listinfo div:first-child{z-index:50;position:fixed;bottom:6px!important;left:20px!important;}
-
-#inlineContent{z-index:21;display: inline !important;position: fixed;bottom:0px;left:0px;background: url(http://dl.dropbox.com/u/94582422/list9/barbg.png) repeat-x;height: 92px !important; width:100%;}
-
-#search {z-index: 40; position:fixed!important; right: 5px!important; bottom:5px!important;}
-#searchBox
-{	background:none!important;
-	color: #8d9396;
-	padding-left:10px;
-	padding-right: 10px;
-	width:250px !important; 
-	height:24px; 
-	font-weight:normal;
-	font-size: 14px !important;
-	font-family: 'Source Sans Pro', sans-serif !important;
-	text-align: right;
+	font-family: verdana,sans-serif;
+	font-size: 11px;
 	text-transform: uppercase;
-	border:none;
 }
 
-#mal_cs_powered{}
-#mal_cs_powered a, #searchListButton{display:none;}
+/*
+copyright contains the &amp;amp;quot;Producted by Garrett Gyssler&amp;amp;quot; text
+DO NOT REMOVE OR HIDE THIS DIV
+IF FOUND TO BE REMOVED, YOUR LIST WILL BE REMOVED TOO
+*/
 
-tr, td, #grand_totals, a span{
--moz-transition: all 0.45s ease-out; /* FF4+ */
--o-transition: all 0.45s ease-out; /* Opera 10.5+ */
--webkit-transition: all 0.45s ease-out; /* Saf3.2+, Chrome */
--ms-transition: all 0.45s ease-out; /* IE10? */
-transition: all 0.45s ease-out; 
+#copyright, #copyright a
+{
+	//background-image: url();
+	background-repeat: no-repeat;
+	padding-top: 0 px;
+	padding-bottom: 50 px;
+	text-align: center;
+	width: 610px;
+	color:#85878e;
+	font-family: 'Source Sans Pro', sans-serif!important;
+	font-size: 12px!important;
 }
-tr:hover .td1, tr:hover .td2, tr:hover .table_header, tr:hover .category_totals{
-background-color: rgb(250,250,250) !important;
-background-color: rgba(250,250,250,1) !important;
+
+#copyright:after {content:'Design by Rukayex. Manga List Theme 5: Black Rock Shooter, The Colorful and the Colorless. Completed March 2011.'; display: block;}
+
+body {
+background: #eaeaeb url(http://dl.dropbox.com/u/94582422/list5brs/bg.png) 0px 0 repeat-y !important;
+}
+#list_surround {
+margin: 3px 0 3px 335px !important;
+}
+#inlineContent {
+background: url(http://dl.dropbox.com/u/94582422/list5brs/sideboxoverlay.png) 0px 0 no-repeat fixed !important;
+}
+#mal_cs_otherlinks div:first-child {
+left: 119px !important;
+}
+#mal_cs_listinfo div:first-child,
+#mal_cs_listinfo div + div,
+#mal_cs_links div:first-child a:first-child,
+#mal_cs_links div:first-child a + a ,
+#mal_cs_links div + div a:first-child,
+#mal_cs_links div + div a + a {
+left: 116px !important;
+}
+.status_selected, .status_not_selected {
+display: inline-block !important;
+text-align: left !important;
+left: 120px !important;
+}
+.status_selected a, .status_not_selected a {
+text-align: right !important;
+display: inline-block !important;
+width: 140px !important;
 }
