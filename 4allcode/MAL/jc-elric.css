@@ -64,7 +64,6 @@
 		
 /* Alternando color de la fila 2 [JC-Elric] */
 
-
     .td2
         {
 		filter:alpha(opacity=80);
@@ -87,14 +86,10 @@
 		filter:alpha(opacity=85);
 	    -moz-opacity:0.85;
     	opacity: 0.85;
-        		
         color: #d4d4d4;
         border-width: 1px 1px 1px 0px;
         border-style: solid;
         border-color: #878787;
-        -webkit-border-radius: 30px;
-        -moz-border-radius: 30px;
-        border-radius: 30px;
         background-color:#242424;
         padding: 2px;
         }
