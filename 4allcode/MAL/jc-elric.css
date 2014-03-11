@@ -1,289 +1,182 @@
-/* Self-explanatory [JC-Elric] Style */
-    body
-        {	
-		background-image: url(https://sekainotamashii.googlecode.com/svn/4allcode/MAL/TariTariLow.jpg);
-		background-attachment: fixed;
-		background-repeat: no-repeat;
-		background-position: center top;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;		
-        color: #FFFFFF;
-		font-family: Verdana, Arial;
-        font-size: 13px;
-        background-color: #FFFFFF;
-        }
- 
-/* Posición de la lista [JC-Elric] */
-    #list_surround 
-        {
-        margin: 0 auto;		
-	    /*float: left;*/
-	    padding-top:108px;	
-	    width: 750px;
-	    background-image: url(http://1.bp.blogspot.com/-OB2DBptFNn4/TtbOzM95pxI/AAAAAAAAEXk/O3aX-gJXROE/s1600/JC-Elric-v2.png);
-	    background-repeat: no-repeat;
-	    background-position: top center;
-        }
- 
-/* Todos los enlaces de mi lista */
+/*
+// Rukayex's anime/manga list version 9. 17 March 2012. 
+//
+// Featured character is Hatsune Miku from VOCALOID. The artist is Gabaisuito-n. 
+// Source image: http://www.pixiv.net/member_illust.php?mode=medium&illust_id=25846826
+//
+// Please do not use without permission.
+*/
 
- 
-/* Alternando el color de la fila 1 [JC-Elric] */
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic|Open+Sans+Condensed:300,300italic,700);
+
+BODY
+{
+	font-family: 'Source Sans Pro', sans-serif !important;
+	font-size: 14px;
+	line-height: 24px;
+	background-color:#ffffff;
+	color:#8d9396;
+	font-weight:normal;
+	background: url(https://dl.dropbox.com/u/94582422/list13sawasawa/sawasawaxx.png) top center fixed no-repeat;
+}
+
+#mal_control_strip
+{
+	background: none !important;
+	font-family: 'Source Sans Pro', sans-serif !important;
+	font-size:14px !important;
+	position: relative !important;
+	color: #8d9396 !important;
+	text-transform:uppercase!important;
+}
+
+#mal_control_strip a, #mal_control_strip strong, #mal_control_strip a:hover 
+{
+	color: #8d9396 !important;
+	font-family: 'Source Sans Pro', sans-serif !important;
+	font-size:14px;!important;
+	font-variant: normal;
+	font-weight: normal !important;
+	text-decoration: none !important;
+}
+
+#mal_cs_pic{
+z-index: 40!important;
+color: #8d9396 !important;
+position: fixed !important;
+left: 15px!important;
+bottom: 14px!important;
+text-align: left !important;
+border:none!important;
+width: 120px!important;
+height:18px!important;
+}
+#mal_cs_pic:before{font-family: 'Source Sans Pro', sans-serif !important;font-size:14px !important; content:'Welcome, Guest!'!important;width:120px!important;text-transform:uppercase!important;}
+#mal_cs_pic a{display:none!important;}
+
+#mal_cs_otherlinks div:first-child, #mal_cs_otherlinks div:first-child a{text-transform:uppercase!important;text-align:center!important;font-weight:normal!important;font-size:14px!important;}
+#mal_cs_listinfo div:first-child, #mal_cs_listinfo div:first-child a{text-transform:uppercase!important;text-align:left!important;font-weight:normal!important;font-size:14px!important;}
+#mal_cs_listinfo div:first-child:before{color:#8d9396;font-weight:normal!important;font-family:'Source Sans Pro', sans-serif !important;content:'Welcome, ';}
+#mal_cs_listinfo div:first-child:after{color:#8d9396;font-weight:normal!important;font-family:'Source Sans Pro', sans-serif !important;content:'!';}
+#mal_cs_listinfo div + div, #mal_cs_otherlinks div + div, #mal_cs_links{display:none!important;}
+#mal_cs_listinfo {border-right: none !important;}
+
+#list_surround{margin: 0 auto; position: relative; right:180px; width: 700px;}
+#list_surround br:first-child + table {padding-bottom: 8px;}
+#list_surround br {display: none !important;}
+
+a{background-color: none !important; color: #8d9396; text-decoration: none;}
+a:visited{color: #8d9396; text-decoration: none;}
+a:hover, small:hover, small a:hover{color: #ecb6b6 !important; text-decoration: none;}
+small, small a{font-size:10px;color:#efd3d3!important;font-weight:normal!important;text-transform:uppercase!important;}
+
 .td1, .td2 {background: #ffffff; border-style:hidden; border-top: 1px dotted #ededed!important;}
 .td1 small, .td2 small{}
 .td1, .td1 a, .td2, .td2 a {color: #8d9396;}
 .td1 a:hover, .td2 a:hover {color: #ecb6b6;}
-   
-/* Esto representa el "Título de Anime", "Score", "# Eps" columnas [JC-Elric] */
-   
-    .table_header
-        {
-				
-		filter:alpha(opacity=85);
-	    -moz-opacity:0.85;
-    	opacity: 0.85;
-        color: #d4d4d4;
-        border-width: 1px 1px 1px 0px;
-        border-style: solid;
-        border-color: #878787;
-        background-color:#242424;
-        padding: 2px;
-        }
-    
-/* HeaderLink representa el color de los enlaces dentro de the_header [JC-Elric] */
-	
-    .table_headerLink
-        {
-        color: ;
-        }
-    
-    .table_headerLink:Visited
-        {
-        color: ;
-        }
-    
-    .table_headerLink:Hover
-        {
-        color: ;
-        }
+
+*[id^=more] .td1, *[id^=more] .td2 {font-weight:normal!important;color:#8d9396;text-align:left!important;padding-left: 40px!important; padding-right:40px!important;line-height:20px!important;}
  
-/* Controles de la decoración forma de selección (el menú desplegable seleccionar)[JC-Elric] */
- 
-     .form
+.table_header {padding-top:3px;text-transform:uppercase;font-size:14px;color: #8d9396; background:none; border-style: hidden; text-decoration: none !important; font-weight: normal !important;}
+.table_headerLink, .table_headerLink:Visited {color: #8d9396; text-decoration: none !important;}
+.table_headerLink:Hover {color: #ecb6b6;}
+.table_headerLink strong, .table_headerLink{font-weight: normal !important;}
 
-        {
+td[class^=t]:first-child{padding-left:5px;padding-right:5px;}
+td[class^=t]:last-child{padding-right:5px;}
 
-        border-width: 1px 1px 1px 1px;
-
-        border-color: #2d0e0c;
-
-        border-style: solid;
-
-        color: #4a4a3e;
-
-        padding: 2px;
-
-        font-size: 11.00px;
-
-		font-family: Verdana, Arial;
-
-        }
-
-		
-
-
-
-/* Which 'status' up top is selected? */
-
-
-.status_selected
-
+.status_selected, .status_not_selected
 {
-
-filter:alpha(opacity=85);
-
-	    -moz-opacity:0.85;
-
-    	opacity: 0.85;
-
-	color: #d4d4d4;
-
-	border-width: 0px 1px 1px 0px;
-
-    border-style: solid;
-
-    border-color: #878787;
-	
-	-webkit-border-radius: 60px;
-    -moz-border-radius: 60px;
-    border-radius: 60px;
-
-    padding: 4px;
-
-    background-color: #253046;
-
-background-image: url(http://1.bp.blogspot.com/-ahywYlGo9wo/TtbQh3KLTGI/AAAAAAAAEYE/x2KwlsLVqog/s1600/select.gif);  
-
-}
-
-
-
-.status_not_selected
-
-{
-
-	color: #d4d4d4;
-
-	border-width: 0px 1px 1px 0px;
-
-    border-style: solid;
-
-    border-color: #878787;
-	
-	-webkit-border-radius: 60px;
-    -moz-border-radius: 60px;
-    border-radius: 60px;
-
-    padding: 4px;
-
-    background-color: #242424;
-
-	}
- 
-/* Clases de cabecera para viendo en ese momento, Completado, Abandonado, etc .. */
- 
- .header_title { display: none; }
- 
-.header_cw
-{
- height: 108px;
-    background: url(http://4.bp.blogspot.com/-8OGJ3G23W_k/TtbOwvNwDtI/AAAAAAAAEXU/iw_AoE0A5H0/s1600/Currently-Readingv2.png) top center no-repeat;
-	
-}
- 
-.header_completed
-{
-  height: 108px;
-    background: url(http://2.bp.blogspot.com/--y3gmRijjT4/TtbPol7Qz6I/AAAAAAAAEX8/dkgwb601Itg/s1600/Completed-v2.png) top center no-repeat;
-	
-}
- 
-.header_onhold
-{
-  height: 108px;
-    background: url(http://2.bp.blogspot.com/-lr7HCwSaBcw/TtbO0LY_irI/AAAAAAAAEXs/jSfOaQSqZaM/s1600/On-Hold-v2.png) top center no-repeat;
-	
-}
- 
-.header_dropped
-{
-  height: 108px;
-    background: url(http://1.bp.blogspot.com/-WTM3X4jlgP8/TtbOxTTS0vI/AAAAAAAAEXc/4aoAnxsYTC8/s1600/Dropped--v2.png) top center no-repeat;
-	
-}
- 
-.header_ptw
-{
-  height: 108px;
-    background: url(http://4.bp.blogspot.com/-M5HgB_6u3l8/TtbO0wzrNqI/AAAAAAAAEXw/1fQeofFRSbQ/s1600/Plan-to-read-v2.png) top center no-repeat;
-	
-}
- 
-.header_title {
+	border: none;
 	font-size: 14px;
-    font-weight: bold;
+	z-index: 20 !important;
+	position: relative;
+	text-transform: uppercase !important;
+	font-family: 'Source Sans Pro', sans-serif !important;
+	color: #8d9396;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
- 
-/* Ultima fila con el total de categorias */
+.status_not_selected:hover, .status_selected:hover{background:#f6e6e6;}
+
+.header_title {font-weight:normal!important;background:url(http://dl.dropbox.com/u/94582422/list9/sectionheader.png);text-align:center;text-transform:uppercase!important;font-size:24px!important;font-family: 'Open Sans Condensed', sans-serif !important;color:#8d9396;width: 700px; height: 43px;padding-top:17px;letter-spacing: .5em;}
+.header_cw, .header_completed, .header_ptw, .header_onhold, .header_dropped {}
+
 .category_totals
 {
- filter:alpha(opacity=85);
-	    -moz-opacity:0.85;
-    	opacity: 0.85;
-        		
-        color: #d4d4d4;
-		text-align: center;
-	    vertical-align: center;
-        border-width: 0px 1px 1px 1px;
-        border-style: solid;
-        border-color: #878787;
-		-webkit-border-radius: 30px;
-        -moz-border-radius: 30px;
-        border-radius: 30px;
-        background-color:#242424;
-        height:20px;
-		padding:2px;
+	background: url(http://dl.dropbox.com/u/94582422/list9/categorybg.png) repeat-x;
+	text-align:center;
+	font-family: 'Source Sans Pro', sans-serif !important;
+	text-transform:uppercase!important;
+	font-size: 12px;
+	border-top: 1px #ededed;
+	color: #8d9396;
+	padding-top:2px;
 }
 
-
- 
+#grand_totals:before{content:'grand totals'; display:block;font-weight:normal!important;text-align:center;text-transform:uppercase!important;font-size:24px!important;font-family: 'Open Sans Condensed', sans-serif !important;color:#8d9396;padding-top:5px;letter-spacing: .5em;}
 #grand_totals
-{
- filter:alpha(opacity=85);
-	    -moz-opacity:0.85;
-    	opacity: 0.85;
-        		
-        color: #d4d4d4;
-		text-align: center;
-	    vertical-align: center;
-        border-width: 0px 1px 1px 1px;
-        border-style: solid;
-        border-color: #878787;
-		-webkit-border-radius: 30px;
-        -moz-border-radius: 30px;
-        border-radius: 30px;
-        background-color:#242424;
-        height:20px;
-		padding:2px;
+{	text-align: center !important;
+	font-family: 'Source Sans Pro', sans-serif !important;
+	text-transform:uppercase!important;
+	color:#8d9396;
+	font-size:14px;
+	border-color: #efd3d3;
+	border-top-style: dotted;
+	border-bottom-style: dotted;
+	border-width: 1px;
+	padding-left: 150px; padding-right: 150px;
 }
- 
-/* header_al is thesurrounding "User's Anime List" at the top */
- 
-.header_al
-{
-	font-weight: bold;
-	font-size: 16px;
-}
- 
-/* header_al_links is thewith your "Profile" and "MyAnimeList home" links */
-
-.header_al_links
-{
- 
-}
- 
-/* controls what styles you can give to all the anime titles in your list */
 
 .animetitle
 {
-	font-weight: bold;
+	font-family: 'Source Sans Pro', sans-serif !important;
+	font-size: 14px;
+	text-transform:uppercase;
+	letter-spacing:.1em;
 }
- 
-/*
-copyright contains the "Producted by Garrett Gyssler" text
-DO NOT REMOVE OR HIDE THIS DIV
-IF FOUND TO BE REMOVED, YOUR LIST WILL BE REMOVED TOO
-*/
- 
+
 #copyright
-{
-	padding-top: 6px;
-	text-align: center;
-	margin: 0 auto;
-	width: 750px;
-	filter:alpha(opacity=80);
-	-moz-opacity:0.80;
-    opacity: 0.80;
-    color: #d4d4d4;
-	line-height:20px;
-    border-width: 0px 1px 1px 0px;
-    border-style: solid;
-    border-color: #878787;
-    -webkit-border-radius: 60px;
-    -moz-border-radius: 60px;
-    border-radius: 60px;
-    padding: 4px;
-    background-color: #242424; 
+{padding-bottom:50px;padding-left: 75px; padding-right: 75px;}
+#copyright, #copyright a{color: #8d9396;}
+#copyright a:hover {color: #8d9396;}
+
+#copyright:before {font-size: 14px; color: #d0a6a6;content:'Design & code by Rukayex. Art by sawasawa. Completed March 2013.'; display: block;}
+
+#list_surround {margin:auto;}
+
+#mal_cs_otherlinks div:first-child {z-index:40;position: fixed !important;right: 0px !important;left: 0px !important;margin: 0 auto !important;bottom:9px!important;text-align:center!important;}
+#mal_cs_listinfo div:first-child{z-index:50;position:fixed;bottom:6px!important;left:20px!important;}
+
+#inlineContent{z-index:21;display: inline !important;position: fixed;bottom:0px;left:0px;background: url(http://dl.dropbox.com/u/94582422/list9/barbg.png) repeat-x;height: 92px !important; width:100%;}
+
+#search {z-index: 40; position:fixed!important; right: 5px!important; bottom:5px!important;}
+#searchBox
+{	background:none!important;
+	color: #8d9396;
+	padding-left:10px;
+	padding-right: 10px;
+	width:250px !important; 
+	height:24px; 
+	font-weight:normal;
+	font-size: 14px !important;
+	font-family: 'Source Sans Pro', sans-serif !important;
+	text-align: right;
+	text-transform: uppercase;
+	border:none;
+}
+
+#mal_cs_powered{}
+#mal_cs_powered a, #searchListButton{display:none;}
+
+tr, td, #grand_totals, a span{
+-moz-transition: all 0.45s ease-out; /* FF4+ */
+-o-transition: all 0.45s ease-out; /* Opera 10.5+ */
+-webkit-transition: all 0.45s ease-out; /* Saf3.2+, Chrome */
+-ms-transition: all 0.45s ease-out; /* IE10? */
+transition: all 0.45s ease-out; 
+}
+tr:hover .td1, tr:hover .td2, tr:hover .table_header, tr:hover .category_totals{
+background-color: rgb(250,250,250) !important;
+background-color: rgba(250,250,250,1) !important;
 }
