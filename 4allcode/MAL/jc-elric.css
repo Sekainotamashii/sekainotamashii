@@ -1,5 +1,5 @@
 /* Self-explanatory [JC-Elric] Style */
-body
+    body
         {	
 		background-image: url(https://sekainotamashii.googlecode.com/svn/4allcode/MAL/TariTariLow.jpg);
 		background-attachment: fixed;
@@ -16,20 +16,18 @@ body
         }
  
 /* Posición de la lista [JC-Elric] */
- 
-#list_surround 
-{
-    margin: 0 auto;		
-	/*float: left;*/
-	padding-top:108px;	
-	width: 750px;
-	background-image: url(http://1.bp.blogspot.com/-OB2DBptFNn4/TtbOzM95pxI/AAAAAAAAEXk/O3aX-gJXROE/s1600/JC-Elric-v2.png);
-	background-repeat: no-repeat;
-	background-position: top center;
-}
+    #list_surround 
+        {
+        margin: 0 auto;		
+	    /*float: left;*/
+	    padding-top:108px;	
+	    width: 750px;
+	    background-image: url(http://1.bp.blogspot.com/-OB2DBptFNn4/TtbOzM95pxI/AAAAAAAAEXk/O3aX-gJXROE/s1600/JC-Elric-v2.png);
+	    background-repeat: no-repeat;
+	    background-position: top center;
+        }
  
 /* Todos los enlaces de mi lista */
- 
     a
         {
         color: #FFFFFF;
@@ -50,39 +48,20 @@ body
  
  
 /* Alternando el color de la fila 1 [JC-Elric] */
-
     .td1
-
         {
-
 		filter:alpha(opacity=80);
-
 	    -moz-opacity:0.80;
-
     	opacity: 0.80;
-		
         color: #d4d4d4;
-		
 		line-height:20px;
-
         border-width: 0px 1px 1px 0px;
-
         border-style: solid;
-
         border-color: #878787;
-		
-	    -webkit-border-radius: 30px;
-        -moz-border-radius: 30px;
-        border-radius: 30px;
-
         padding: 2px;
-
         background-color: #242424; 
-
         }
-
-   
-
+		
 /* Alternando color de la fila 2 [JC-Elric] */
 
 
