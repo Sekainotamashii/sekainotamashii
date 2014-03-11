@@ -17,14 +17,7 @@ BODY
 	background-color:#ffffff;
 	color:#8d9396;
 	font-weight:normal;
-		background-image: url(https://sekainotamashii.googlecode.com/svn/4allcode/MAL/TariTariLow.jpg);
-		background-attachment: fixed;
-		background-repeat: no-repeat;
-		background-position: center top;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;		
+	background: url(https://dl.dropbox.com/u/94582422/list13sawasawa/sawasawaxx.png) top center fixed no-repeat;
 }
 
 #mal_control_strip
@@ -68,7 +61,7 @@ height:18px!important;
 #mal_cs_listinfo div + div, #mal_cs_otherlinks div + div, #mal_cs_links{display:none!important;}
 #mal_cs_listinfo {border-right: none !important;}
 
-#list_surround{margin: 0 auto; position: relative; /*right:180px;*/ width: 700px;}
+#list_surround{margin: 0 auto; position: relative; right:180px; width: 700px;}
 #list_surround br:first-child + table {padding-bottom: 8px;}
 #list_surround br {display: none !important;}
 
