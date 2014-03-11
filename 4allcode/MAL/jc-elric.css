@@ -51,15 +51,15 @@
     .td1
         {
 		filter:alpha(opacity=80);
-	    -moz-opacity:0.80;
-    	opacity: 0.80;
+	    /*-moz-opacity:0.80;
+    	opacity: 0.80;*/
         color: #d4d4d4;
 		line-height:20px;
         border-width: 0px 1px 1px 0px;
         border-style: solid;
         border-color: #878787;
         padding: 2px;
-        background-color: #242424; 
+        background-color: #fff; 
         }
 		
 /* Alternando color de la fila 2 [JC-Elric] */
